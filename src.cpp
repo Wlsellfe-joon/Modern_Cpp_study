@@ -1,31 +1,32 @@
 # include <iostream>
+# include <string>
 using namespace std;
+
+class car {
+public:
+	string model;
+	string color;
+	int man_limit;
+	int speed;
+
+	void speed_up() {
+		speed += 10;
+	}
+	
+	void speed_down() {
+		speed -= 10;
+	}
+};
 
 int main()
 {
-	const auto people { 10 };
-	int Num[people];
+	car A;
+	A.color = 'RED';
+	A.man_limit = 10;
+	A.speed = 50;
 
-
-	for (int i = 0; i < people; i++) {
-		cout << "How many apple did you eat?: ";
-		cin >> Num[i];
-		cout << endl;
-	}
-
-	cout << " Total Number of Apples: ";
-	for (int i=0; i < people; i++) {
-		cout << Num[i] << " ";
-	}
-
-	int max = Num[0];
-	int index;
-	for (int i = 0; i < people; i++) {
-		if (max < Num[i + 1]){
-			max = Num[i + 1];
-			index = i + 1;
-		}
-	}
-	cout << "°¡Àå ¸¹ÀÌ ¸ÔÀº³ðÀº " << index << "¹øÂ°³ð!!" << endl;
+	A.speed_up();
+	A.speed_up();
+	cout << "My car speed: " << A.speed << endl;
 	return 0;
 }
