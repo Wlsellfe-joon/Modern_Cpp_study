@@ -1,16 +1,16 @@
 # include <iostream>
 # include <string>
-# include "car.h"
+# include "Circle.h"
 using namespace std;
 
 int main()
 {
-	car A;
-	A.speed = 500;
-	cout << "My car speed before: " << A.get_speed() << endl;
-
-	A.speed_up();
-	cout << "My car speed now: " << A.get_speed();
-
+	for (int i = 0; i < 10; i++) {
+		int x = 100 + rand() % 300;
+		int y = 100 + rand() % 300;
+		int r = rand() % 100;
+		Circle c{ x, y, r, "yellow" };
+		c.draw();
+	}
 	return 0;
 }
