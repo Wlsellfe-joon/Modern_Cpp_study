@@ -20,7 +20,7 @@ public:
 
 void Time::inc_hour() {
 	++hour;
-	if (hour > 23)
+	if (hour > 23) 
 		hour = 0;
 }
 
